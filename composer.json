@@ -1,0 +1,30 @@
+{
+    "name": "bcm/frontend-stack",
+    "description": "Frontend scaffolding for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Mano",
+            "email": "michael.mano26@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^5.3.3 || ^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8.35 || ^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "BCM\\FrontendStack\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BCM\\FrontendStack\\ServiceProvider"
+            ]
+        }
+    }
+}
