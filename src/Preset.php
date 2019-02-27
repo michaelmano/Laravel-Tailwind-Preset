@@ -13,8 +13,6 @@ class Preset extends LaravelPreset
      */
     public static function install()
     {
-        static::updatePackages();
-
         tap(new Filesystem(), function ($filesystem) {
             $filesystem->deleteDirectory(base_path('node_modules'));
             $filesystem->cleanDirectory(resource_path('sass'));
@@ -26,6 +24,7 @@ class Preset extends LaravelPreset
             $filesystem->delete(base_path('webpack.mix.js'));
         });
 
+        static::updatePackages();
         static::updateBootstrapping();
     }
 
@@ -63,6 +62,7 @@ class Preset extends LaravelPreset
         copy(__DIR__ . '/stubs/.gitignore', base_path('.gitignore'));
         copy(__DIR__ . '/stubs/.editorconfig', base_path('.editorconfig'));
         copy(__DIR__ . '/stubs/.eslint.json', base_path('.eslint.json'));
+        copy(__DIR__ . '/stubs/.php_cs', base_path('.php_cs'));
         copy(__DIR__ . '/stubs/webpack.mix.js', base_path('webpack.mix.js'));
         copy(__DIR__ . '/stubs/app.js', resource_path('js/app.js'));
         copy(__DIR__ . '/stubs/app.scss', resource_path('sass/app.scss'));
