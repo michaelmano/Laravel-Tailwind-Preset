@@ -1,6 +1,6 @@
 <?php
 
-namespace BCM\FrontendStack;
+namespace Alchemi\TailwindPreset;
 
 use Illuminate\Support\ServiceProvider as Provider;
 use Illuminate\Foundation\Console\PresetCommand;
@@ -24,9 +24,9 @@ class ServiceProvider extends Provider
      */
     public function boot()
     {
-        PresetCommand::macro('bcm', function($command) {
+        PresetCommand::macro('tailwind', function($command) {
             Preset::install();
-            $command->info('The BCM Frontend stack has been installed.');
+            $command->info('The Tailwind preset has now been installed.');
             $command->info('Please finish the installation by running `npm install` or `yarn`');
         });
     }

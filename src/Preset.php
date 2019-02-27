@@ -1,6 +1,6 @@
 <?php
 
-namespace BCM\FrontendStack;
+namespace Alchemi\TailwindPreset;
 
 use Illuminate\Support\Arr;
 use Illuminate\Filesystem\Filesystem;

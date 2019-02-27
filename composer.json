@@ -1,5 +1,5 @@
 {
-    "name": "bcm/frontend-stack",
+    "name": "alchemi/tailwind-preset",
     "description": "Frontend scaffolding for Laravel",
     "type": "library",
     "license": "MIT",
@@ -17,13 +17,13 @@
     },
     "autoload": {
         "psr-4": {
-            "BCM\\FrontendStack\\": "src/"
+            "Alchemi\\TailwindPreset\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "BCM\\FrontendStack\\ServiceProvider"
+                "Alchemi\\TailwindPreset\\ServiceProvider"
             ]
         }
     }
