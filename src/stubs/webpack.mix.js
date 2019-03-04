@@ -26,7 +26,6 @@ class TailwindExtractor {
 
 mix
   .js('resources/js/app.js', 'public/js')
-  .copy('resources/images', 'public/images')
   .sass('resources/sass/app.scss', 'public/css')
   .options({
     processCssUrls: false,
