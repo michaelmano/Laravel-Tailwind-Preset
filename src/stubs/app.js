@@ -31,6 +31,7 @@ if (token) {
  */
 
 const VueComponents = require.context('./', true, /\.vue$/i);
+
 VueComponents.keys().map(key => {
     const name = `Vue${key.split('/').pop().split('.')[0]}`;
     return Vue.component(name, VueComponents(key).default)
